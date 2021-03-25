@@ -16,8 +16,8 @@ $IPTABLES -A INPUT -p tcp --dport 80 -j ACCEPT
 $IPTABLES -A INPUT -p tcp --dport 443 -j ACCEPT
 #HTTPS Admin Panel
 $IPTABLES -A INPUT -p tcp --dport 2030 -j ACCEPT
-#HTTPS Admin Panel
-#$IPTABLES -A INPUT -p tcp --dport 2031 -j ACCEPT
+#HTTPS Client Panel
+$IPTABLES -A INPUT -p tcp --dport 2031 -j ACCEPT
 
 
 #loopback
