@@ -1,0 +1,24 @@
+IPTABLES=/sbin/iptables
+
+#start and flush
+$IPTABLES -F
+$IPTABLES -t nat -F
+$IPTABLES -X
+$IPTABLES -P FORWARD DROP
+$IPTABLES -P INPUT   DROP
+$IPTABLES -P OUTPUT  ACCEPT
+
+#SSH traffic
+$IPTABLES -A INPUT -p tcp --dport 22 -j ACCEPT
+#HTTP traffic
+$IPTABLES -A INPUT -p tcp --dport 80 -j ACCEPT
+#HTTPS
+$IPTABLES -A INPUT -p tcp --dport 443 -j ACCEPT
+#HTTPS Admin Panel
+$IPTABLES -A INPUT -p tcp --dport 2030 -j ACCEPT
+#HTTPS Admin Panel
+#$IPTABLES -A INPUT -p tcp --dport 2031 -j ACCEPT
+
+
+#loopback
+$IPTABLES -A INPUT -i lo -p all -j ACCEPT
