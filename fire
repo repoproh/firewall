@@ -1,3 +1,4 @@
+
 IPTABLES=/sbin/iptables
 
 #start and flush
@@ -10,15 +11,24 @@ $IPTABLES -P OUTPUT  ACCEPT
 
 #SSH traffic
 $IPTABLES -A INPUT -p tcp --dport 22 -j ACCEPT
+
 #HTTP traffic
 $IPTABLES -A INPUT -p tcp --dport 80 -j ACCEPT
+
 #HTTPS
 $IPTABLES -A INPUT -p tcp --dport 443 -j ACCEPT
+
 #HTTPS Admin Panel
 $IPTABLES -A INPUT -p tcp --dport 2030 -j ACCEPT
-#HTTPS Client Panel
-$IPTABLES -A INPUT -p tcp --dport 2031 -j ACCEPT
 
+#HTTPS Admin Panel
+#$IPTABLES -A INPUT -p tcp --dport 2031 -j ACCEPT
 
 #loopback
 $IPTABLES -A INPUT -i lo -p all -j ACCEPT
+
+#allow local outgoing connections (mail, etc)
+iptables -I INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+
+#allow incoming	ping     
+iptables -I INPUT 2 -p icmp --icmp-type echo-request -j ACCEPT
