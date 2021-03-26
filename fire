@@ -21,7 +21,7 @@ $IPTABLES -A INPUT -p tcp --dport 443 -j ACCEPT
 $IPTABLES -A INPUT -p tcp --dport 2031 -j ACCEPT
 
 #HTTPS Client Panel
-#$IPTABLES -A INPUT -p tcp --dport 2083 -j ACCEPT
+$IPTABLES -A INPUT -p tcp --dport 2083 -j ACCEPT
 
 #loopback
 $IPTABLES -A INPUT -i lo -p all -j ACCEPT
@@ -30,5 +30,5 @@ $IPTABLES -A INPUT -i lo -p all -j ACCEPT
 $IPTABLES -I INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
 
 #allow incoming	ping     
-#$IPTABLES -I INPUT  -p icmp --icmp-type echo-request -j ACCEPT
+$IPTABLES -I INPUT  -p icmp --icmp-type echo-request -j ACCEPT
 
