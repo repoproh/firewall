@@ -31,4 +31,4 @@ $IPTABLES -A INPUT -i lo -p all -j ACCEPT
 $IPTABLES -I INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
 
 #allow incoming	ping     
-#$IPTABLES -I INPUT  -p icmp --icmp-type echo-request -j ACCEPT
+$IPTABLES -I INPUT  -p icmp --icmp-type echo-request -j ACCEPT
