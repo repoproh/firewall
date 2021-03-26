@@ -1,4 +1,3 @@
-
 IPTABLES=/sbin/iptables
 
 #start and flush
