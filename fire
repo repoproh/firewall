@@ -22,7 +22,7 @@ $IPTABLES -A INPUT -p tcp --dport 443 -j ACCEPT
 $IPTABLES -A INPUT -p tcp --dport 2031 -j ACCEPT
 
 #HTTPS Client Panel
-#$IPTABLES -A INPUT -p tcp --dport 2083 -j ACCEPT
+$IPTABLES -A INPUT -p tcp --dport 2083 -j ACCEPT
 
 #loopback
 $IPTABLES -A INPUT -i lo -p all -j ACCEPT
