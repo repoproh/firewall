@@ -10,6 +10,9 @@ COMMIT
 :INPUT DROP [19:912]
 :FORWARD DROP [0:0]
 :OUTPUT ACCEPT [43:3361]
+# block offending ip's
+-A INPUT -s 64.39.99.112 -j DROP
+#
 -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
 -A INPUT -p icmp -m icmp --icmp-type 8 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 5788 -j ACCEPT
