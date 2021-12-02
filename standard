@@ -12,6 +12,7 @@ COMMIT
 :OUTPUT ACCEPT [43:3361]
 #Block unwanted ip's
 -A INPUT -s 64.39.99.112 -j DROP
+-A INPUT -s 139.87.112.105 -j DROP
 #
 -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
 -A INPUT -p icmp -m icmp --icmp-type 8 -j ACCEPT
