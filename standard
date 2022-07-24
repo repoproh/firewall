@@ -14,6 +14,7 @@ COMMIT
 -A INPUT -s 64.39.99.112 -j DROP
 -A INPUT -s 139.87.112.105 -j DROP
 -A INPUT -s 64.39.98.118 -j DROP
+-A INPUT -s 135.181.73.252 -j DROP
 #
 -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
 -A INPUT -p icmp -m icmp --icmp-type 8 -j ACCEPT
