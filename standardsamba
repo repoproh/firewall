@@ -26,10 +26,10 @@ COMMIT
 -A INPUT -p tcp -m tcp --dport 2083 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 2087 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 2031 -j ACCEPT
--A INPUT -p udp -m udp --dport 137 -j ACCEPT #SAMBA
--A INPUT -p udp -m udp --dport 138 -j ACCEPT #SAMBA
--A INPUT -p tcp -m tcp --dport 139 -j ACCEPT #SAMBA
--A INPUT -p tcp -m tcp --dport 445 -j ACCEPT #SAMBA
+-A INPUT -p udp -m udp --dport 137 -j ACCEPT 
+-A INPUT -p udp -m udp --dport 138 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 139 -j ACCEPT 
+-A INPUT -p tcp -m tcp --dport 445 -j ACCEPT 
 
 -A INPUT -i lo -j ACCEPT
 COMMIT
