@@ -76,6 +76,7 @@ COMMIT
 -A INPUT -s 90.22.248.85 -p tcp -m tcp --dport 5788 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 5788 -j DROP
 -A INPUT -p icmp -m icmp --icmp-type 8 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 21 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 25 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
