@@ -102,6 +102,9 @@ COMMIT
 -A INPUT -s 85.26.75.130 -p tcp --match multiport --dports 30000:50000 -j ACCEPT
 -A INPUT -s 89.226.219.76 -p tcp -m tcp --dport 21 -j ACCEPT
 -A INPUT -s 89.226.219.76 -p tcp --match multiport --dports 30000:50000 -j ACCEPT
+-A INPUT -s 80.200.240.205 -p tcp -m tcp --dport 21 -j ACCEPT
+-A INPUT -s 80.200.240.205 -p tcp --match multiport --dports 30000:50000 -j ACCEPT
+
 
 
 
