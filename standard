@@ -63,6 +63,7 @@ COMMIT
 -A INPUT -s 82.66.25.243 -p tcp -m tcp --dport 2082 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 2082 -j DROP
 
+-A INPUT -s 91.188.255.237 -p tcp -m tcp --dport 2083 -j ACCEPT
 -A INPUT -s 90.3.132.206 -p tcp -m tcp --dport 2083 -j ACCEPT 
 -A INPUT -s 85.26.75.130/32 -p tcp -m tcp --dport 2083 -j ACCEPT
 -A INPUT -s 82.142.0.222/32 -p tcp -m tcp --dport 2083 -j ACCEPT
@@ -129,6 +130,8 @@ COMMIT
 -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
 #added ftp
 
+-A INPUT -s 91.188.255.237 -p tcp -m tcp --dport 21 -j ACCEPT
+-A INPUT -s 91.188.255.237 -p tcp --match multiport --dports 30000:50000 -j ACCEPT
 -A INPUT -s 89.226.219.38 -p tcp -m tcp --dport 21 -j ACCEPT 
 -A INPUT -s 89.226.219.38 -p tcp --match multiport --dports 30000:50000 -j ACCEPT
 -A INPUT -s 90.3.132.206 -p tcp -m tcp --dport 21 -j ACCEPT 
