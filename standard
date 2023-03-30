@@ -131,6 +131,8 @@ COMMIT
 -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
 #added ftp
 
+-A INPUT -s 95.217.22.55 -p tcp -m tcp --dport 21 -j ACCEPT
+-A INPUT -s 95.217.22.55 -p tcp --match multiport --dports 30000:50000 -j ACCEPT
 -A INPUT -s 91.188.255.237 -p tcp -m tcp --dport 21 -j ACCEPT
 -A INPUT -s 91.188.255.237 -p tcp --match multiport --dports 30000:50000 -j ACCEPT
 -A INPUT -s 89.226.219.38 -p tcp -m tcp --dport 21 -j ACCEPT 
