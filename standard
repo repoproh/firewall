@@ -19,6 +19,7 @@ COMMIT
 
 
 -A INPUT -s 195.201.24.57 -p tcp -m tcp --dport 21 -j ACCEPT
+-A INPUT -s 85.119.223.60 -p tcp -m tcp --dport 21 -j ACCEPT
 -A INPUT -s 116.203.102.63 -p tcp -m tcp --dport 21 -j ACCEPT
 -A INPUT -s 94.130.225.225 -p tcp -m tcp --dport 21 -j ACCEPT
 -A INPUT -s 94.130.175.218 -p tcp -m tcp --dport 21 -j ACCEPT
@@ -92,6 +93,7 @@ COMMIT
 -A INPUT -s 82.66.25.243 -p tcp -m tcp --dport 2086 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 2086 -j DROP
 
+-A INPUT -s 85.119.223.60 -p tcp -m tcp --dport 2087 -j ACCEPT
 -A INPUT -s 91.188.255.237 -p tcp -m tcp --dport 2087 -j ACCEPT
 -A INPUT -s 90.3.132.206 -p tcp -m tcp --dport 2087 -j ACCEPT 
 -A INPUT -s 85.26.75.130/32 -p tcp -m tcp --dport 2087 -j ACCEPT
@@ -137,6 +139,8 @@ COMMIT
 -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
 #added ftp
 
+-A INPUT -s 85.119.223.60 -p tcp -m tcp --dport 21 -j ACCEPT
+-A INPUT -s 85.119.223.60 -p tcp --match multiport --dports 30000:50000 -j ACCEPT
 -A INPUT -s 195.201.24.57 -p tcp -m tcp --dport 21 -j ACCEPT
 -A INPUT -s 195.201.24.57 -p tcp --match multiport --dports 30000:50000 -j ACCEPT
 -A INPUT -s 116.203.102.63 -p tcp -m tcp --dport 21 -j ACCEPT
