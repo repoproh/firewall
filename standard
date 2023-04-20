@@ -18,7 +18,8 @@ COMMIT
 -A INPUT -s 135.181.73.252/32 -j DROP
 -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
 
-
+#FTP
+-A INPUT -s 91.174.179.240 -p tcp -m tcp --dport 21 -j ACCEPT
 -A INPUT -s 195.201.24.57 -p tcp -m tcp --dport 21 -j ACCEPT
 -A INPUT -s 85.119.223.60 -p tcp -m tcp --dport 21 -j ACCEPT
 -A INPUT -s 116.203.102.63 -p tcp -m tcp --dport 21 -j ACCEPT
@@ -38,6 +39,7 @@ COMMIT
 -A INPUT -s 81.11.203.38 -p tcp -m tcp --dport 21 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 21 -j DROP
 
+-A INPUT -s 91.174.179.240 -p tcp -m tcp --dport 2030 -j ACCEPT
 -A INPUT -s 90.3.132.206 -p tcp -m tcp --dport 2030 -j ACCEPT 
 -A INPUT -s 85.26.75.130/32 -p tcp -m tcp --dport 2030 -j ACCEPT
 -A INPUT -s 82.142.0.222/32 -p tcp -m tcp --dport 2030 -j ACCEPT
@@ -49,6 +51,8 @@ COMMIT
 -A INPUT -s 82.66.25.243 -p tcp -m tcp --dport 2030 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 2030 -j DROP
 
+
+-A INPUT -s 91.174.179.240 -p tcp -m tcp --dport 2031 -j ACCEPT
 -A INPUT -s 90.3.132.206 -p tcp -m tcp --dport 2031 -j ACCEPT 
 -A INPUT -s 85.26.75.130/32 -p tcp -m tcp --dport 2031 -j ACCEPT
 -A INPUT -s 82.142.0.222/32 -p tcp -m tcp --dport 2031 -j ACCEPT
@@ -60,6 +64,8 @@ COMMIT
 -A INPUT -s 82.66.25.243 -p tcp -m tcp --dport 2031 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 2031 -j DROP
 
+
+-A INPUT -s 91.174.179.240 -p tcp -m tcp --dport 2082 -j ACCEPT
 -A INPUT -s 90.3.132.206 -p tcp -m tcp --dport 2082 -j ACCEPT 
 -A INPUT -s 85.26.75.130/32 -p tcp -m tcp --dport 2082 -j ACCEPT
 -A INPUT -s 82.142.0.222/32 -p tcp -m tcp --dport 2082 -j ACCEPT
@@ -71,6 +77,7 @@ COMMIT
 -A INPUT -s 82.66.25.243 -p tcp -m tcp --dport 2082 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 2082 -j DROP
 
+-A INPUT -s 91.174.179.240 -p tcp -m tcp --dport 2083 -j ACCEPT
 -A INPUT -s 91.188.255.237 -p tcp -m tcp --dport 2083 -j ACCEPT
 -A INPUT -s 90.3.132.206 -p tcp -m tcp --dport 2083 -j ACCEPT 
 -A INPUT -s 85.26.75.130/32 -p tcp -m tcp --dport 2083 -j ACCEPT
@@ -83,6 +90,7 @@ COMMIT
 -A INPUT -s 82.66.25.243 -p tcp -m tcp --dport 2083 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 2083 -j DROP
 
+-A INPUT -s 91.174.179.240 -p tcp -m tcp --dport 2086 -j ACCEPT
 -A INPUT -s 90.3.132.206 -p tcp -m tcp --dport 2086 -j ACCEPT 
 -A INPUT -s 85.26.75.130/32 -p tcp -m tcp --dport 2086 -j ACCEPT
 -A INPUT -s 82.142.0.222/32 -p tcp -m tcp --dport 2086 -j ACCEPT
@@ -94,6 +102,7 @@ COMMIT
 -A INPUT -s 82.66.25.243 -p tcp -m tcp --dport 2086 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 2086 -j DROP
 
+-A INPUT -s 91.174.179.240 -p tcp -m tcp --dport 2087 -j ACCEPT
 -A INPUT -s 85.119.223.60 -p tcp -m tcp --dport 2087 -j ACCEPT
 -A INPUT -s 91.188.255.237 -p tcp -m tcp --dport 2087 -j ACCEPT
 -A INPUT -s 90.3.132.206 -p tcp -m tcp --dport 2087 -j ACCEPT 
@@ -107,6 +116,7 @@ COMMIT
 -A INPUT -s 82.66.25.243 -p tcp -m tcp --dport 2087 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 2087 -j DROP
 
+-A INPUT -s 91.174.179.240 -p tcp -m tcp --dport 2304 -j ACCEPT
 -A INPUT -s 90.3.132.206 -p tcp -m tcp --dport 2304 -j ACCEPT 
 -A INPUT -s 85.26.75.130/32 -p tcp -m tcp --dport 2304 -j ACCEPT
 -A INPUT -s 82.142.0.222/32 -p tcp -m tcp --dport 2304 -j ACCEPT
@@ -121,6 +131,7 @@ COMMIT
 -A INPUT -s 185.28.36.34/32 -p tcp -m tcp --dport 10050 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 10050 -j DROP
 
+-A INPUT -s 91.174.179.240 -p tcp -m tcp --dport 5788 -j ACCEPT
 -A INPUT -s 91.188.255.237 -p tcp -m tcp --dport 5788 -j ACCEPT
 -A INPUT -s 89.226.219.38 -p tcp -m tcp --dport 5788 -j ACCEPT 
 -A INPUT -s 90.3.132.206 -p tcp -m tcp --dport 5788 -j ACCEPT 
@@ -140,6 +151,8 @@ COMMIT
 -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
 #added ftp
 
+-A INPUT -s 91.174.179.240 -p tcp -m tcp --dport 21 -j ACCEPT
+-A INPUT -s 91.174.179.240 -p tcp --match multiport --dports 30000:50000 -j ACCEPT
 -A INPUT -s 85.119.223.60 -p tcp -m tcp --dport 21 -j ACCEPT
 -A INPUT -s 85.119.223.60 -p tcp --match multiport --dports 30000:50000 -j ACCEPT
 -A INPUT -s 195.201.24.57 -p tcp -m tcp --dport 21 -j ACCEPT
