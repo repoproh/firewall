@@ -38,7 +38,8 @@ COMMIT
 -A INPUT -s 90.22.248.85 -p tcp -m tcp --dport 21 -j ACCEPT
 -A INPUT -s 90.22.248.152 -p tcp -m tcp --dport 21 -j ACCEPT
 -A INPUT -s 82.66.25.243 -p tcp -m tcp --dport 21 -j ACCEPT
--A INPUT -s 81.11.203.38 -p tcp -m tcp --dport 21 -j ACCEPT
+-A INPUT -s 81.11.203.38 -p tcp -m tcp --dport 21 -j ACCEPT 
+-A INPUT -s 82.66.252.119 -p tcp -m tcp --dport 21 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 21 -j DROP
 
 -A INPUT -s 91.174.179.240 -p tcp -m tcp --dport 2030 -j ACCEPT
@@ -51,6 +52,7 @@ COMMIT
 -A INPUT -s 90.22.248.85 -p tcp -m tcp --dport 2030 -j ACCEPT
 -A INPUT -s 90.22.248.152 -p tcp -m tcp --dport 2030 -j ACCEPT
 -A INPUT -s 82.66.25.243 -p tcp -m tcp --dport 2030 -j ACCEPT
+-A INPUT -s 82.66.252.119 -p tcp -m tcp --dport 2030 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 2030 -j DROP
 
 
@@ -64,6 +66,7 @@ COMMIT
 -A INPUT -s 90.22.248.85 -p tcp -m tcp --dport 2031 -j ACCEPT
 -A INPUT -s 90.22.248.152 -p tcp -m tcp --dport 2031 -j ACCEPT
 -A INPUT -s 82.66.25.243 -p tcp -m tcp --dport 2031 -j ACCEPT
+-A INPUT -s 82.66.252.119 -p tcp -m tcp --dport 2031 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 2031 -j DROP
 
 
@@ -77,6 +80,7 @@ COMMIT
 -A INPUT -s 90.22.248.85 -p tcp -m tcp --dport 2082 -j ACCEPT
 -A INPUT -s 90.22.248.152 -p tcp -m tcp --dport 2082 -j ACCEPT
 -A INPUT -s 82.66.25.243 -p tcp -m tcp --dport 2082 -j ACCEPT
+-A INPUT -s 82.66.252.119 -p tcp -m tcp --dport 2082 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 2082 -j DROP
 
 -A INPUT -s 91.174.179.240 -p tcp -m tcp --dport 2083 -j ACCEPT
@@ -90,6 +94,7 @@ COMMIT
 -A INPUT -s 90.22.248.85 -p tcp -m tcp --dport 2083 -j ACCEPT
 -A INPUT -s 90.22.248.152 -p tcp -m tcp --dport 2083 -j ACCEPT
 -A INPUT -s 82.66.25.243 -p tcp -m tcp --dport 2083 -j ACCEPT
+-A INPUT -s 82.66.252.119 -p tcp -m tcp --dport 2083 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 2083 -j DROP
 
 -A INPUT -s 91.174.179.240 -p tcp -m tcp --dport 2086 -j ACCEPT
@@ -102,6 +107,7 @@ COMMIT
 -A INPUT -s 90.22.248.85 -p tcp -m tcp --dport 2086 -j ACCEPT
 -A INPUT -s 90.22.248.152 -p tcp -m tcp --dport 2086 -j ACCEPT
 -A INPUT -s 82.66.25.243 -p tcp -m tcp --dport 2086 -j ACCEPT
+-A INPUT -s 82.66.252.119 -p tcp -m tcp --dport 2086 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 2086 -j DROP
 
 -A INPUT -s 91.174.179.240 -p tcp -m tcp --dport 2087 -j ACCEPT
@@ -116,6 +122,7 @@ COMMIT
 -A INPUT -s 90.22.248.85 -p tcp -m tcp --dport 2087 -j ACCEPT
 -A INPUT -s 90.22.248.152 -p tcp -m tcp --dport 2087 -j ACCEPT
 -A INPUT -s 82.66.25.243 -p tcp -m tcp --dport 2087 -j ACCEPT
+-A INPUT -s 82.66.252.119 -p tcp -m tcp --dport 2087 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 2087 -j DROP
 
 -A INPUT -s 91.174.179.240 -p tcp -m tcp --dport 2304 -j ACCEPT
@@ -128,6 +135,7 @@ COMMIT
 -A INPUT -s 90.22.248.85 -p tcp -m tcp --dport 2034 -j ACCEPT
 -A INPUT -s 90.22.248.152 -p tcp -m tcp --dport 2034 -j ACCEPT
 -A INPUT -s 82.66.25.243 -p tcp -m tcp --dport 2034 -j ACCEPT
+-A INPUT -s 82.66.252.119 -p tcp -m tcp --dport 2034 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 2304 -j DROP
 
 -A INPUT -s 185.28.36.34/32 -p tcp -m tcp --dport 10050 -j ACCEPT
@@ -147,6 +155,7 @@ COMMIT
 -A INPUT -s 82.66.25.243 -p tcp -m tcp --dport 5788 -j ACCEPT
 -A INPUT -s 116.193.143.228 -p tcp -m tcp --dport 5788 -j ACCEPT
 -A INPUT -s 116.193.143.57 -p tcp -m tcp --dport 5788 -j ACCEPT
+-A INPUT -s 82.66.252.119 -p tcp -m tcp --dport 5788 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 5788 -j DROP
 
 -A INPUT -p icmp -m icmp --icmp-type 8 -j ACCEPT
@@ -201,7 +210,8 @@ COMMIT
 -A INPUT -s 80.200.240.205 -p tcp --match multiport --dports 30000:50000 -j ACCEPT
 -A INPUT -s 82.66.25.243 -p tcp --match multiport --dports 30000:50000 -j ACCEPT
 -A INPUT -s 81.11.203.38 -p tcp --match multiport --dports 30000:50000 -j ACCEPT
-
+-A INPUT -s 82.66.252.119 -p tcp --match multiport --dports 30000:50000 -j ACCEPT
+-A INPUT -s 82.66.252.119 -p tcp -m tcp --dport 21 -j ACCEPT
 
 -A INPUT -i lo -j ACCEPT
 
