@@ -24,10 +24,12 @@ COMMIT
 #ELASTIC
 -A INPUT -s 185.28.36.0/24 -p tcp -m tcp --dport 9200 -j ACCEPT
 -A INPUT -s 185.28.38.0/24 -p tcp -m tcp --dport 9200 -j ACCEPT
+-A INPUT -s 127.0.0.1 -p tcp -m tcp --dport 9200 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 9200 -j DROP
 
 -A INPUT -s 185.28.36.0/24 -p tcp -m tcp --dport 9300 -j ACCEPT
 -A INPUT -s 185.28.38.0/24 -p tcp -m tcp --dport 9300 -j ACCEPT
+-A INPUT -s 127.0.0.1 -p tcp -m tcp --dport 9200 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 9300 -j DROP
 
 
