@@ -61,6 +61,7 @@ COMMIT
 -A INPUT -s 82.66.252.119 -p tcp -m tcp --dport 21 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 21 -j DROP
 
+-A INPUT -s 194.78.96.162 -p tcp -m tcp --dport 2030 -j ACCEPT
 -A INPUT -s 91.188.255.237  -p tcp -m tcp --dport 2030 -j ACCEPT
 -A INPUT -s 91.174.179.240 -p tcp -m tcp --dport 2030 -j ACCEPT
 -A INPUT -s 90.3.132.206 -p tcp -m tcp --dport 2030 -j ACCEPT 
@@ -75,7 +76,7 @@ COMMIT
 -A INPUT -s 82.66.252.119 -p tcp -m tcp --dport 2030 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 2030 -j DROP
 
-
+-A INPUT -s 194.78.96.162 -p tcp -m tcp --dport 2031 -j ACCEPT
 -A INPUT -s 91.188.255.237  -p tcp -m tcp --dport 2031 -j ACCEPT
 -A INPUT -s 91.174.179.240 -p tcp -m tcp --dport 2031 -j ACCEPT
 -A INPUT -s 90.3.132.206 -p tcp -m tcp --dport 2031 -j ACCEPT 
@@ -91,6 +92,7 @@ COMMIT
 -A INPUT -p tcp -m tcp --dport 2031 -j DROP
 
 
+-A INPUT -s 194.78.96.162 -p tcp -m tcp --dport 2082 -j ACCEPT
 -A INPUT -s 91.188.255.237  -p tcp -m tcp --dport 2082 -j ACCEPT
 -A INPUT -s 91.174.179.240 -p tcp -m tcp --dport 2082 -j ACCEPT
 -A INPUT -s 90.3.132.206 -p tcp -m tcp --dport 2082 -j ACCEPT 
@@ -105,6 +107,7 @@ COMMIT
 -A INPUT -s 82.66.252.119 -p tcp -m tcp --dport 2082 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 2082 -j DROP
 
+-A INPUT -s 194.78.96.162 -p tcp -m tcp --dport 2083 -j ACCEPT
 -A INPUT -s 91.188.255.237  -p tcp -m tcp --dport 2083 -j ACCEPT
 -A INPUT -s 91.174.179.240 -p tcp -m tcp --dport 2083 -j ACCEPT
 -A INPUT -s 91.188.255.237 -p tcp -m tcp --dport 2083 -j ACCEPT
@@ -120,6 +123,7 @@ COMMIT
 -A INPUT -s 82.66.252.119 -p tcp -m tcp --dport 2083 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 2083 -j DROP
 
+-A INPUT -s 194.78.96.162 -p tcp -m tcp --dport 2086 -j ACCEPT
 -A INPUT -s 91.188.255.237  -p tcp -m tcp --dport 2086 -j ACCEPT
 -A INPUT -s 91.174.179.240 -p tcp -m tcp --dport 2086 -j ACCEPT
 -A INPUT -s 90.3.132.206 -p tcp -m tcp --dport 2086 -j ACCEPT 
@@ -134,6 +138,7 @@ COMMIT
 -A INPUT -s 82.66.252.119 -p tcp -m tcp --dport 2086 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 2086 -j DROP
 
+-A INPUT -s 194.78.96.162 -p tcp -m tcp --dport 2087 -j ACCEPT
 -A INPUT -s 91.188.255.237  -p tcp -m tcp --dport 2087 -j ACCEPT
 -A INPUT -s 91.174.179.240 -p tcp -m tcp --dport 2087 -j ACCEPT
 -A INPUT -s 85.119.223.60 -p tcp -m tcp --dport 2087 -j ACCEPT
@@ -150,6 +155,7 @@ COMMIT
 -A INPUT -s 82.66.252.119 -p tcp -m tcp --dport 2087 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 2087 -j DROP
 
+-A INPUT -s 194.78.96.162 -p tcp -m tcp --dport 2304 -j ACCEPT
 -A INPUT -s 91.188.255.237  -p tcp -m tcp --dport 2304 -j ACCEPT
 -A INPUT -s 91.174.179.240 -p tcp -m tcp --dport 2304 -j ACCEPT
 -A INPUT -s 90.3.132.206 -p tcp -m tcp --dport 2304 -j ACCEPT 
@@ -167,6 +173,7 @@ COMMIT
 -A INPUT -s 185.28.36.34/32 -p tcp -m tcp --dport 10050 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 10050 -j DROP
 
+-A INPUT -s 194.78.96.162 -p tcp -m tcp --dport 5788 -j ACCEPT
 -A INPUT -s 91.188.255.237  -p tcp -m tcp --dport 5788 -j ACCEPT
 -A INPUT -s 171.241.132.176  -p tcp -m tcp --dport 5788 -j ACCEPT
 -A INPUT -s 91.183.214.41  -p tcp -m tcp --dport 5788 -j ACCEPT
