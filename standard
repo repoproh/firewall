@@ -34,6 +34,9 @@ COMMIT
 
 
 #FTP
+
+-A INPUT -s 62.235.86.175 -p tcp -m tcp --dport 21 -j ACCEPT
+-A INPUT -s 80.200.240.205 -p tcp -m tcp --dport 21 -j ACCEPT
 -A INPUT -s 194.78.96.162 -p tcp -m tcp --dport 21 -j ACCEPT
 -A INPUT -s 91.188.255.237  -p tcp -m tcp --dport 21 -j ACCEPT
 -A INPUT -s 91.183.214.41  -p tcp -m tcp --dport 21 -j ACCEPT
@@ -201,6 +204,8 @@ COMMIT
 
 #added ftp
 
+-A INPUT -s 62.235.86.175 -p tcp --match multiport --dports 30000:50000 -j ACCEPT
+-A INPUT -s 80.200.240.205 -p tcp --match multiport --dports 30000:50000 -j ACCEPT
 -A INPUT -s 194.78.96.162 -p tcp --match multiport --dports 30000:50000 -j ACCEPT
 -A INPUT -s 91.188.255.237 -p tcp --match multiport --dports 30000:50000 -j ACCEPT
 -A INPUT -s 91.183.214.41 -p tcp --match multiport --dports 30000:50000 -j ACCEPT
