@@ -38,6 +38,20 @@ COMMIT
 -A INPUT -s 86.252.170.38 -p tcp -m tcp --dport 21 -j ACCEPT
 -A INPUT -s 86.252.170.38 -p tcp --match multiport --dports 30000:50000 -j ACCEPT
 
+#TPE IP 
+-A INPUT -s 94.224.35.198 -p tcp -m tcp --dport 21 -j ACCEPT
+-A INPUT -s 94.224.35.198 -p tcp -m tcp --dport 2030 -j ACCEPT
+-A INPUT -s 94.224.35.198 -p tcp -m tcp --dport 2031 -j ACCEPT
+-A INPUT -s 94.224.35.198 -p tcp -m tcp --dport 2082 -j ACCEPT
+-A INPUT -s 94.224.35.198 -p tcp -m tcp --dport 2083 -j ACCEPT
+-A INPUT -s 94.224.35.198 -p tcp -m tcp --dport 2086 -j ACCEPT
+-A INPUT -s 94.224.35.198 -p tcp -m tcp --dport 2087 -j ACCEPT
+-A INPUT -s 94.224.35.198 -p tcp -m tcp --dport 2304 -j ACCEPT
+-A INPUT -s 94.224.35.198 -p tcp -m tcp --dport 5788 -j ACCEPT
+-A INPUT -s 94.224.35.198 -p tcp -m tcp --dport 21 -j ACCEPT
+-A INPUT -s 94.224.35.198 -p tcp --match multiport --dports 30000:50000 -j ACCEPT
+
+
 
 #ELASTIC
 -A INPUT -s 185.28.36.0/24 -p tcp -m tcp --dport 9200 -j ACCEPT
